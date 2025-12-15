@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AnimeFlixBackend.Models;
 
 namespace AnimeFlix.Models
 {
@@ -13,6 +14,9 @@ namespace AnimeFlix.Models
 
         public UserPreference Preference { get; set; }
         public ICollection<WatchHistory> WatchHistories { get; set; }
+        public ICollection<Watchlist> Watchlists { get; set; }
         public ICollection<Review> Reviews { get; set; }
+
+        public ICollection<AIRecommendationLog> AIRecommendationLogs { get; set; }
     }
 }

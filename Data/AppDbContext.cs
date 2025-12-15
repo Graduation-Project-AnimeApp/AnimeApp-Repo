@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using AnimeFlix.Models;
+using AnimeFlixBackend.Models;
 
 namespace AnimeFlix.Data
 {
@@ -10,35 +11,59 @@ namespace AnimeFlix.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserPreference> UserPreferences { get; set; }
         public DbSet<WatchHistory> WatchHistories { get; set; }
+        public DbSet<Watchlist> Watchlists { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<AIRecommendationLog> AIRecommendationLogs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           
             modelBuilder.Entity<User>().HasKey(u => u.UserId);
-            modelBuilder.Entity<WatchHistory>().HasKey(h => h.HistoryId);
-            modelBuilder.Entity<Review>().HasKey(r => r.ReviewId);
             modelBuilder.Entity<UserPreference>().HasKey(p => p.PreferenceId);
-            // Unique Email
+            modelBuilder.Entity<WatchHistory>().HasKey(h => h.HistoryId);
+            modelBuilder.Entity<Watchlist>().HasKey(w => w.WatchListId);
+            modelBuilder.Entity<Review>().HasKey(r => r.ReviewId);
+            modelBuilder.Entity<AIRecommendationLog>().HasKey(a => a.LogId);
+
+           
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
 
-            // One-to-One: User ↔ UserPreference
+  
+
+            // User ↔ UserPreference (One-to-One)
             modelBuilder.Entity<UserPreference>()
                 .HasOne(p => p.User)
                 .WithOne(u => u.Preference)
                 .HasForeignKey<UserPreference>(p => p.UserId);
 
-            // One-to-Many: User ↔ WatchHistory
+            // User ↔ WatchHistory (One-to-Many)
             modelBuilder.Entity<WatchHistory>()
                 .HasOne(h => h.User)
                 .WithMany(u => u.WatchHistories)
                 .HasForeignKey(h => h.UserId);
 
-            // One-to-Many: User ↔ Review
+            // User ↔ Watchlist (One-to-Many)
+            modelBuilder.Entity<Watchlist>()
+                .HasOne(w => w.User)
+                .WithMany(u => u.Watchlists)
+                .HasForeignKey(w => w.UserId);
+
+            // User ↔ Review (One-to-Many)
             modelBuilder.Entity<Review>()
                 .HasOne(r => r.User)
                 .WithMany(u => u.Reviews)
                 .HasForeignKey(r => r.UserId);
+
+            // User ↔ AIRecommendationLog (One-to-Many)
+            modelBuilder.Entity<AIRecommendationLog>()
+                .HasOne(a => a.User)
+                .WithMany(u => u.AIRecommendationLogs)
+                .HasForeignKey(a => a.UserId);
+
+            // Seed Data (Fixed Dates)
+            var seedDate = new DateTime(2025, 1, 1);
 
             modelBuilder.Entity<User>().HasData(
                 new User
@@ -46,8 +71,8 @@ namespace AnimeFlix.Data
                     UserId = 1,
                     Username = "Esraa",
                     Email = "esraa@example.com",
-                    PasswordHash = "e3afed0047b08059d0fada10f400c1e5", 
-                    CreatedAt = DateTime.Now
+                    PasswordHash = "e3afed0047b08059d0fada10f400c1e5",
+                    CreatedAt = seedDate
                 },
                 new User
                 {
@@ -55,9 +80,10 @@ namespace AnimeFlix.Data
                     Username = "Ali",
                     Email = "ali@example.com",
                     PasswordHash = "e3afed0047b08059d0fada10f400c1e5",
-                    CreatedAt = DateTime.Now
+                    CreatedAt = seedDate
                 }
             );
+
             modelBuilder.Entity<UserPreference>().HasData(
                 new UserPreference
                 {
@@ -80,35 +106,40 @@ namespace AnimeFlix.Data
                 {
                     HistoryId = 1,
                     UserId = 1,
-                    AnimeApiId = 32, // Example anime ID from API
-                    WatchStatus = "Watching",
-                    WatchedAt = DateTime.Now.AddDays(-1)
-                },
-                new WatchHistory
-                {
-                    HistoryId = 2,
-                    UserId = 2,
-                    AnimeApiId = 30,
-                    WatchStatus = "Completed",
-                    WatchedAt = DateTime.Now.AddDays(-5)
+                    AnimeApiId = 32,
+                    WatchedAt = seedDate
                 }
             );
+
+            modelBuilder.Entity<Watchlist>().HasData(
+                new Watchlist
+                {
+                    WatchListId = 1,
+                    UserId = 2,
+                    AnimeApiId = 45,
+                    AddedAt = seedDate
+                }
+            );
+
             modelBuilder.Entity<Review>().HasData(
                 new Review
                 {
                     ReviewId = 1,
                     UserId = 1,
                     AnimeApiId = 32,
-                    ReviewText = "Amazing anime! Great action scenes.",
-                    CreatedAt = DateTime.Now
-                },
-                new Review
+                    ReviewText = "Amazing anime!",
+                    CreatedAt = seedDate
+                }
+            );
+
+            modelBuilder.Entity<AIRecommendationLog>().HasData(
+                new AIRecommendationLog
                 {
-                    ReviewId = 2,
-                    UserId = 2,
-                    AnimeApiId = 30,
-                    ReviewText = "Very emotional story. Loved it!",
-                    CreatedAt = DateTime.Now
+                    LogId = 1,
+                    UserId = 1,
+                    AnimeApiId = 99,
+                    Reason = "Based on Action genre and Excited mood",
+                    CreatedAt = seedDate
                 }
             );
         }

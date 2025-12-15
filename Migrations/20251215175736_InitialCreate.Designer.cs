@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeFlixBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251215143855_InitialCreate")]
+    [Migration("20251215175736_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,6 +24,44 @@ namespace AnimeFlixBackend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("AIRecommendationLog", b =>
+                {
+                    b.Property<int>("LogId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LogId"));
+
+                    b.Property<int>("AnimeApiId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LogId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AIRecommendationLogs");
+
+                    b.HasData(
+                        new
+                        {
+                            LogId = 1,
+                            AnimeApiId = 99,
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Reason = "Based on Action genre and Excited mood",
+                            UserId = 1
+                        });
+                });
 
             modelBuilder.Entity("AnimeFlix.Models.Review", b =>
                 {
@@ -57,17 +95,9 @@ namespace AnimeFlixBackend.Migrations
                         {
                             ReviewId = 1,
                             AnimeApiId = 32,
-                            CreatedAt = new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4738),
-                            ReviewText = "Amazing anime! Great action scenes.",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReviewText = "Amazing anime!",
                             UserId = 1
-                        },
-                        new
-                        {
-                            ReviewId = 2,
-                            AnimeApiId = 30,
-                            CreatedAt = new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4749),
-                            ReviewText = "Very emotional story. Loved it!",
-                            UserId = 2
                         });
                 });
 
@@ -105,7 +135,7 @@ namespace AnimeFlixBackend.Migrations
                         new
                         {
                             UserId = 1,
-                            CreatedAt = new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(3500),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "esraa@example.com",
                             PasswordHash = "e3afed0047b08059d0fada10f400c1e5",
                             Username = "Esraa"
@@ -113,7 +143,7 @@ namespace AnimeFlixBackend.Migrations
                         new
                         {
                             UserId = 2,
-                            CreatedAt = new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(3515),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "ali@example.com",
                             PasswordHash = "e3afed0047b08059d0fada10f400c1e5",
                             Username = "Ali"
@@ -177,10 +207,6 @@ namespace AnimeFlixBackend.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<string>("WatchStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("WatchedAt")
                         .HasColumnType("datetime2");
 
@@ -196,17 +222,52 @@ namespace AnimeFlixBackend.Migrations
                             HistoryId = 1,
                             AnimeApiId = 32,
                             UserId = 1,
-                            WatchStatus = "Watching",
-                            WatchedAt = new DateTime(2025, 12, 14, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4489)
-                        },
+                            WatchedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("AnimeFlixBackend.Models.Watchlist", b =>
+                {
+                    b.Property<int>("WatchListId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WatchListId"));
+
+                    b.Property<DateTime>("AddedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("AnimeApiId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("WatchListId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Watchlists");
+
+                    b.HasData(
                         new
                         {
-                            HistoryId = 2,
-                            AnimeApiId = 30,
-                            UserId = 2,
-                            WatchStatus = "Completed",
-                            WatchedAt = new DateTime(2025, 12, 10, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4508)
+                            WatchListId = 1,
+                            AddedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AnimeApiId = 45,
+                            UserId = 2
                         });
+                });
+
+            modelBuilder.Entity("AIRecommendationLog", b =>
+                {
+                    b.HasOne("AnimeFlix.Models.User", "User")
+                        .WithMany("AIRecommendationLogs")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("AnimeFlix.Models.Review", b =>
@@ -242,14 +303,29 @@ namespace AnimeFlixBackend.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("AnimeFlixBackend.Models.Watchlist", b =>
+                {
+                    b.HasOne("AnimeFlix.Models.User", "User")
+                        .WithMany("Watchlists")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("AnimeFlix.Models.User", b =>
                 {
+                    b.Navigation("AIRecommendationLogs");
+
                     b.Navigation("Preference")
                         .IsRequired();
 
                     b.Navigation("Reviews");
 
                     b.Navigation("WatchHistories");
+
+                    b.Navigation("Watchlists");
                 });
 #pragma warning restore 612, 618
         }

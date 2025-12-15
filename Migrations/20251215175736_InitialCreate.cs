@@ -30,6 +30,28 @@ namespace AnimeFlixBackend.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AIRecommendationLogs",
+                columns: table => new
+                {
+                    LogId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    AnimeApiId = table.Column<int>(type: "int", nullable: false),
+                    Reason = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AIRecommendationLogs", x => x.LogId);
+                    table.ForeignKey(
+                        name: "FK_AIRecommendationLogs_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Reviews",
                 columns: table => new
                 {
@@ -80,7 +102,6 @@ namespace AnimeFlixBackend.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     AnimeApiId = table.Column<int>(type: "int", nullable: false),
-                    WatchStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     WatchedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -94,23 +115,45 @@ namespace AnimeFlixBackend.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Watchlists",
+                columns: table => new
+                {
+                    WatchListId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    AnimeApiId = table.Column<int>(type: "int", nullable: false),
+                    AddedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Watchlists", x => x.WatchListId);
+                    table.ForeignKey(
+                        name: "FK_Watchlists_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "CreatedAt", "Email", "PasswordHash", "Username" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(3500), "esraa@example.com", "e3afed0047b08059d0fada10f400c1e5", "Esraa" },
-                    { 2, new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(3515), "ali@example.com", "e3afed0047b08059d0fada10f400c1e5", "Ali" }
+                    { 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "esraa@example.com", "e3afed0047b08059d0fada10f400c1e5", "Esraa" },
+                    { 2, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ali@example.com", "e3afed0047b08059d0fada10f400c1e5", "Ali" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "AIRecommendationLogs",
+                columns: new[] { "LogId", "AnimeApiId", "CreatedAt", "Reason", "UserId" },
+                values: new object[] { 1, 99, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Based on Action genre and Excited mood", 1 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
                 columns: new[] { "ReviewId", "AnimeApiId", "CreatedAt", "ReviewText", "UserId" },
-                values: new object[,]
-                {
-                    { 1, 32, new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4738), "Amazing anime! Great action scenes.", 1 },
-                    { 2, 30, new DateTime(2025, 12, 15, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4749), "Very emotional story. Loved it!", 2 }
-                });
+                values: new object[] { 1, 32, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Amazing anime!", 1 });
 
             migrationBuilder.InsertData(
                 table: "UserPreferences",
@@ -123,12 +166,18 @@ namespace AnimeFlixBackend.Migrations
 
             migrationBuilder.InsertData(
                 table: "WatchHistories",
-                columns: new[] { "HistoryId", "AnimeApiId", "UserId", "WatchStatus", "WatchedAt" },
-                values: new object[,]
-                {
-                    { 1, 32, 1, "Watching", new DateTime(2025, 12, 14, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4489) },
-                    { 2, 30, 2, "Completed", new DateTime(2025, 12, 10, 16, 38, 55, 149, DateTimeKind.Local).AddTicks(4508) }
-                });
+                columns: new[] { "HistoryId", "AnimeApiId", "UserId", "WatchedAt" },
+                values: new object[] { 1, 32, 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Watchlists",
+                columns: new[] { "WatchListId", "AddedAt", "AnimeApiId", "UserId" },
+                values: new object[] { 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 45, 2 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AIRecommendationLogs_UserId",
+                table: "AIRecommendationLogs",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reviews_UserId",
@@ -151,11 +200,19 @@ namespace AnimeFlixBackend.Migrations
                 name: "IX_WatchHistories_UserId",
                 table: "WatchHistories",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Watchlists_UserId",
+                table: "Watchlists",
+                column: "UserId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AIRecommendationLogs");
+
             migrationBuilder.DropTable(
                 name: "Reviews");
 
@@ -164,6 +221,9 @@ namespace AnimeFlixBackend.Migrations
 
             migrationBuilder.DropTable(
                 name: "WatchHistories");
+
+            migrationBuilder.DropTable(
+                name: "Watchlists");
 
             migrationBuilder.DropTable(
                 name: "Users");
