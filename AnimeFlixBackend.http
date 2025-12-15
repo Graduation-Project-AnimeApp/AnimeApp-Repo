@@ -1,0 +1,11 @@
+@AnimeFlixBackend_HostAddress = http://localhost:5196
+
+GET {{AnimeFlixBackend_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{AnimeFlixBackend_HostAddress}}/todos/1
+Accept: application/json
+
+###
