@@ -1,0 +1,64 @@
+/* --- Header & Nav --- */
+header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: black;
+}
+
+.movie-icon {
+  color: darkorchid;
+}
+
+.logo-text {
+  font-size: 1.25rem; /* xl */
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.nav-link-custom {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: white;
+}
+
+/* --- Search Bar --- */
+.search-container {
+  background-color: #1a1a1a;
+  border-radius: 0.5rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 160px;
+}
+
+.search-icon {
+  color: rgba(255, 255, 255, 0.5);
+  padding-left: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 0 1rem 0 0.5rem;
+  height: 100%;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none; /* Remove Bootstrap default focus glow */
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}

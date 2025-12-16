@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #ec13a4;
+  --bg-dark: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-dark);
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* --- Layout Wrappers --- */
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  /* Responsive padding matching original Tailwind breakpoints */
+  padding: 1.25rem 1rem;
+}
+
+@media (min-width: 576px) {
+  .main-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .main-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .main-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .main-container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+.text-episodes {
+  color: #959595;
+}
+/* --- Grid System --- */
+.anime-grid {
+  display: grid;
+  /* This mimics repeat(auto-fill, minmax(180px, 1fr)) */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* --- Anime Cards --- */
+.anime-card {
+  cursor: pointer;
+}
+
+.poster-wrapper {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.anime-card:hover .poster-wrapper {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.badge-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.badge-glass {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: white;
+}
+
+.anime-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.anime-episodes {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* --- Pagination --- */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* Matches Tailwind gap-2 roughly */
+}
+
+.page-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.page-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+}
+
+.page-btn.inactive {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.page-btn.inactive:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Utility to match text primary color */
+.text-primary-custom {
+  color: var(--primary-color);
+}
