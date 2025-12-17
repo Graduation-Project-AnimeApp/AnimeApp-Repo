@@ -1,6 +1,4 @@
-﻿using AnimeFlix.Models;
-
-namespace AnimeFlixBackend.Models
+﻿namespace AnimeFlixBackend.Domain.Entities
 {
     public class Watchlist
     {

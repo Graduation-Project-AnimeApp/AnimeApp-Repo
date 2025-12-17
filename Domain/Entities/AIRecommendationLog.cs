@@ -1,4 +1,4 @@
-﻿using AnimeFlix.Models;
+﻿using AnimeFlixBackend.Domain.Entities;
 
 public class AIRecommendationLog
 {

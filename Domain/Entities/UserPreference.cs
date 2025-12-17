@@ -1,4 +1,4 @@
-﻿namespace AnimeFlix.Models
+﻿namespace AnimeFlixBackend.Domain.Entities
 {
     public class UserPreference
     {

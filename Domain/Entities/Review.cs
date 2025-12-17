@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AnimeFlix.Models
+namespace AnimeFlixBackend.Domain.Entities
 {
     public class Review
     {

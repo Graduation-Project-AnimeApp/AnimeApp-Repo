@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using AnimeFlix.Models;
-using AnimeFlixBackend.Models;
+using AnimeFlixBackend.Domain.Entities;
 
 namespace AnimeFlix.Data
 {

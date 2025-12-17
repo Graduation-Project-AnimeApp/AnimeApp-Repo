@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnimeFlixBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5158f4976dac2bd1640edbf9fc6124a69e781eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5061c80a2d9f413864edfaaa17e02f9992e5501e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnimeFlixBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnimeFlixBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
