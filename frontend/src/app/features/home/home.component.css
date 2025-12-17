@@ -57,35 +57,12 @@ body {
 .text-episodes {
   color: #959595;
 }
-/* --- Grid System --- */
-.anime-grid {
-  display: grid;
-  /* This mimics repeat(auto-fill, minmax(180px, 1fr)) */
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-}
 
-/* --- Anime Cards --- */
 .anime-card {
   cursor: pointer;
+  transition: 0.4s ease-in-out;
 }
-
-.poster-wrapper {
-  width: 100%;
-  aspect-ratio: 3/4;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-/* Hover Effect */
-.anime-card:hover .poster-wrapper {
+.anime-card:hover {
   transform: scale(1.05);
 }
 

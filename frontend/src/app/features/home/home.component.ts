@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from "@angular/core";
 import { AnimeService } from "../../core/services/anime.service";
 import { Anime } from "../../core/model/anime";
 import { log } from "console";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -12,6 +13,7 @@ import { log } from "console";
 })
 export class HomeComponent implements OnInit {
   animeService = inject(AnimeService);
+  router = inject(Router);
   topAnimeList: Anime[] = [];
 
   ngOnInit(): void {
@@ -31,5 +33,7 @@ export class HomeComponent implements OnInit {
       selectedAnime.mal_id,
       selectedAnime.title
     );
+
+    this.router.navigate(["details", selectedAnime.mal_id]);
   }
 }

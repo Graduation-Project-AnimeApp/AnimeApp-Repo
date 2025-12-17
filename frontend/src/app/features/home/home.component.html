@@ -4,14 +4,14 @@
       <div class="p-3">
         <h1 class="fw-bold display-5 mb-0 text-white">Top Anime</h1>
       </div>
-      <div class="row">
+      <div class="row mt-2">
         @for (anime of topAnimeList; track $index) {
         <div class="col-3 mb-3">
           <img
             (click)="openDetails(anime)"
             [src]="anime.images.jpg.image_url"
             alt=""
-            class="rounded-4"
+            class="rounded-4 anime-card"
             style="height: 318px"
           />
           <p class="pt-2 m-0 text-truncate text-white">{{ anime.title }}</p>

@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Anime, AnimeApiResponse } from "../model/anime";
+import { Anime, AnimeApiResponse, AnimeDetailsResponse } from "../model/anime";
 
 @Injectable({
   providedIn: "root",
@@ -13,5 +13,9 @@ export class AnimeService {
 
   getTopAnimeList(): Observable<AnimeApiResponse> {
     return this.http.get<AnimeApiResponse>(`${this.baseUrl}top/anime?limit=20`);
+  }
+
+  getAnimeById(id: string | null): Observable<AnimeDetailsResponse> {
+    return this.http.get<AnimeDetailsResponse>(`${this.baseUrl}anime/${id}`);
   }
 }

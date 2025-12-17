@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="container pt-5">
+    <div class="d-flex">
+      <img
+        class="rounded-4"
+        [src]="selectedAnime.images.jpg.image_url"
+        alt="cover"
+      />
+      <div class="d-flex flex-column ms-3">
+        <h1 class="text-white">{{ selectedAnime.title }}</h1>
+        <p class="rating-text">⭐ {{ selectedAnime.score }} / 10</p>
+        <div class="mb-2">
+          @for (genre of selectedAnime.genres; track $index) {
+          <span class="badge rounded-pill bg-dark me-2">{{ genre.name }}</span>
+          }
+        </div>
+        <button class="generate-summary">Generate AI Summary</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p class="text-white mt-4">{{ selectedAnime.synopsis }}</p>
+  </div>
+</div>
