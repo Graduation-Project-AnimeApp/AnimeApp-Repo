@@ -1,0 +1,26 @@
+﻿################################################################################
+# Standard .NET / Visual Studio Exclusions
+################################################################################
+
+# User-specific files (Locks, Indexing, and Personal Settings)
+.vs/
+*.user
+*.userosscache
+*.sln.docuser
+
+# Build results (Compiled binaries)
+[Bb]in/
+[Oo]bj/
+
+# Backups and temporary files
+*.csproj.Backup
+*.csproj.Backup.tmp
+*.tmp
+*.bak
+
+# Publish output
+publish/
+
+# Environment secrets (Don't push your real passwords/API keys!)
+appsettings.Development.json
+usersecrets.json
