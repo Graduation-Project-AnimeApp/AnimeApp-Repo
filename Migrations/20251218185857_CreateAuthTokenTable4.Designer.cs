@@ -4,6 +4,7 @@ using AnimeFlix.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeFlixBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251218185857_CreateAuthTokenTable4")]
+    partial class CreateAuthTokenTable4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,6 +61,35 @@ namespace AnimeFlixBackend.Migrations
                             Reason = "Based on Action genre and Excited mood",
                             UserId = 1
                         });
+                });
+
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.AuthToken", b =>
+                {
+                    b.Property<int>("TokenId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TokenId"));
+
+                    b.Property<DateTime>("TokenExpirationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TokenName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TokenId");
+
+                    b.HasIndex("TokenName")
+                        .IsUnique();
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Tokens");
                 });
 
             modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.Review", b =>
@@ -267,6 +299,17 @@ namespace AnimeFlixBackend.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.AuthToken", b =>
+                {
+                    b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
+                        .WithOne("Token")
+                        .HasForeignKey("AnimeFlixBackend.Domain.Entities.AuthToken", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.Review", b =>
                 {
                     b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
@@ -319,6 +362,9 @@ namespace AnimeFlixBackend.Migrations
                         .IsRequired();
 
                     b.Navigation("Reviews");
+
+                    b.Navigation("Token")
+                        .IsRequired();
 
                     b.Navigation("WatchHistories");
 

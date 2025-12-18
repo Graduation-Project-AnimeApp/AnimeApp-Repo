@@ -1,18 +1,50 @@
 ﻿using AnimeFlix.Data;
 using AnimeFlixBackend.Application.Interfaces;
 using AnimeFlixBackend.Application.Mapping;
-using AnimeFlixBackend.Application.Services;
+using AnimeFlixBackend.Application.Mapping.Services;
+using AnimeFlixBackend.Domain.Entities;
 using AnimeFlixBackend.Infrastructure.External;
 using AnimeFlixBackend.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using System;
 using System.Net.Http;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // --- Services Configuration ---
+
+// Add JWT Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+ {
+     options.TokenValidationParameters = new TokenValidationParameters
+     {
+         ValidateIssuer = true,
+         ValidateAudience = true,
+         ValidateLifetime = true,
+         ValidateIssuerSigningKey = true,
+         ValidIssuer = builder.Configuration["Jwt:Issuer"],
+         ValidAudience = builder.Configuration["Jwt:Audience"],
+         IssuerSigningKey = new SymmetricSecurityKey(
+             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]!))
+     };
+ });
+
+
+// Register services
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<AuthService>();
 
 // Add controllers support
 builder.Services.AddControllers();
@@ -58,7 +90,7 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "AllowAllDev",
+    options.AddPolicy(name: "AllowAll",
         builder =>
         {
             builder.AllowAnyOrigin() // Allows requests from any domain/port
@@ -66,6 +98,8 @@ builder.Services.AddCors(options =>
                    .AllowAnyMethod();
         });
 });
+
+
 // --- Build Application ---
 var app = builder.Build();
 
@@ -84,6 +118,8 @@ if (app.Environment.IsDevelopment())
 // Standard ASP.NET Core Middleware
 app.UseHttpsRedirection();
 
+app.UseCors("AllowAll");
+app.UseAuthentication();
 // Note: Authentication middleware is typically required here for authorized endpoints (removed as requested)
 app.UseAuthorization(); // This middleware is still required to enforce any [Authorize] attributes
 

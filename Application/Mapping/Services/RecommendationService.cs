@@ -3,7 +3,7 @@ using AnimeFlixBackend.Application.Interfaces;
 using AnimeFlixBackend.Domain.Entities;
 using System.Linq;
 
-namespace AnimeFlixBackend.Application.Services
+namespace AnimeFlixBackend.Application.Mapping.Services
 {
     // This class correctly implements the updated IRecommendationService interface
     public class RecommendationService : IRecommendationService

@@ -1,7 +1,7 @@
 ﻿using AnimeFlixBackend.Application.DTOs;
 using AnimeFlixBackend.Application.Interfaces;
 
-namespace AnimeFlixBackend.Application.Services
+namespace AnimeFlixBackend.Application.Mapping.Services
 {
     // Inside Application/Services (for demonstration)
     public class SimpleRecommendationEngine : IRecommendationEngine

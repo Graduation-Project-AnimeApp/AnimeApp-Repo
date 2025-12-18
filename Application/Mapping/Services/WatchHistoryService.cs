@@ -1,17 +1,16 @@
 ﻿using AnimeFlixBackend.Application.DTOs;
 using AnimeFlixBackend.Application.Interfaces;
 using AnimeFlixBackend.Domain.Entities;
-using AnimeFlixBackend.Domain.Enums;
 using AutoMapper;
 
-namespace AnimeFlixBackend.Application.Services
+namespace AnimeFlixBackend.Application.Mapping.Services
 {
-    public class WatchlistService : IWatchlistService
+    public class WatchHistoryService : IWatchHistoryService
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
 
-        public WatchlistService(IUnitOfWork uow, IMapper mapper)
+        public WatchHistoryService(IUnitOfWork uow, IMapper mapper)
         {
             _uow = uow;
             _mapper = mapper;
@@ -19,21 +18,20 @@ namespace AnimeFlixBackend.Application.Services
 
         public async Task AddAsync(int userId, int animeApiId)
         {
-            var entity = new Watchlist
+            await _uow.WatchHistories.AddAsync(new WatchHistory
             {
                 UserId = userId,
                 AnimeApiId = animeApiId
-            };
+            });
 
-            await _uow.Watchlists.AddAsync(entity);
             await _uow.SaveChangesAsync();
         }
 
-        public async Task<List<WatchlistDto>> GetUserWatchlist(int userId)
+        public async Task<List<WatchHistoryDto>> GetUserHistory(int userId)
         {
-            var data = await _uow.Watchlists.GetAllAsync();
-            return _mapper.Map<List<WatchlistDto>>(
-                data.Where(x => x.UserId == userId));
+            var data = await _uow.WatchHistories.FindAsync(x => x.UserId == userId);
+
+            return _mapper.Map<List<WatchHistoryDto>>(data);
         }
     }
 
