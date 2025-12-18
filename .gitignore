@@ -24,3 +24,16 @@ publish/
 # Environment secrets (Don't push your real passwords/API keys!)
 appsettings.Development.json
 usersecrets.json
+
+# Visual Studio
+.vs/
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.cache
+*.log
