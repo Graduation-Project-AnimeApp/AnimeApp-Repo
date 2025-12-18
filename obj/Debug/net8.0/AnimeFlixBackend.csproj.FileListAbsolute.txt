@@ -289,3 +289,10 @@ G:\anime_web\proj\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 G:\anime_web\proj\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 G:\anime_web\proj\obj\Debug\net8.0\AnimeFlixBackend.MvcApplicationPartsAssemblyInfo.cs
 G:\anime_web\proj\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+G:\anime_web\proj\bin\Debug\net8.0\Google.Apis.dll
+G:\anime_web\proj\bin\Debug\net8.0\Google.Apis.Auth.dll
+G:\anime_web\proj\bin\Debug\net8.0\Google.Apis.Core.dll
+G:\anime_web\proj\bin\Debug\net8.0\Google.GenAI.dll
+G:\anime_web\proj\bin\Debug\net8.0\Newtonsoft.Json.dll
+G:\anime_web\proj\bin\Debug\net8.0\System.Management.dll
+G:\anime_web\proj\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
