@@ -1,0 +1,827 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\anime_web\\proj\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\services\\characterchatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\services\\characterchatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\icharacterchatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\icharacterchatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\chatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\chatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\jikananimeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\jikananimeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\animeflixbackend.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:animeflixbackend.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\migrations\\20251217112844_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\migrations\\20251217112844_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\domain\\entities\\airecommendationlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:domain\\entities\\airecommendationlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\services\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\services\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\services\\animeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\services\\animeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\services\\recommendationengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\services\\recommendationengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\jikansingleresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\jikansingleresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\iwatchlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\iwatchlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\iwatchhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\iwatchhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\irecommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\irecommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\irecommendationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\irecommendationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\ijikanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\ijikanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\interfaces\\ianimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\interfaces\\ianimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\watchlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\watchlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\watchhistorydtocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\watchhistorydtocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\recommendationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\recommendationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\paginationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\paginationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\dtos\\animedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\dtos\\animedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\external\\jikanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\external\\jikanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\external\\jikananime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\external\\jikananime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\external\\aiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\external\\aiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\external\\jikanlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\external\\jikanlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\controllers\\recommendationcontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\controllers\\recommendationcontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\controllers\\watchhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\controllers\\watchhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\services\\watchhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\services\\watchhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\domain\\entities\\watchhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:domain\\entities\\watchhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\application\\services\\watchlistservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:application\\services\\watchlistservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\domain\\entities\\watchlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:domain\\entities\\watchlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|g:\\anime_web\\proj\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F5E6F6-236E-4676-B93A-DD1DEDF26832}|AnimeFlixBackend.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CharacterChatService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Services\\CharacterChatService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\CharacterChatService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Services\\CharacterChatService.cs",
+              "RelativeToolTip": "Application\\Services\\CharacterChatService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:58:57.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChatDto.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\ChatDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ChatDto.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\ChatDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\ChatDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:57:47.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T14:12:36.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T22:00:08.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Controllers\\ChatController.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Infrastructure\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T17:01:16.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JikanAnimeResponse.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\JikanAnimeResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\JikanAnimeResponse.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\JikanAnimeResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\JikanAnimeResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:57:09.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\anime_web\\proj\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "G:\\anime_web\\proj\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-15T14:37:17.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICharacterChatService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\ICharacterChatService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\ICharacterChatService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\ICharacterChatService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\ICharacterChatService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:59:33.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "G:\\anime_web\\proj\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-17T18:02:13.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AnimeService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Services\\AnimeService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\AnimeService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Services\\AnimeService.cs",
+              "RelativeToolTip": "Application\\Services\\AnimeService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAIBJwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T06:03:49.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20251217112844_InitialMigration.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Migrations\\20251217112844_InitialMigration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20251217112844_InitialMigration.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Migrations\\20251217112844_InitialMigration.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20251217112844_InitialMigration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T11:33:51.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RecommendationService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Services\\RecommendationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\RecommendationService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Services\\RecommendationService.cs",
+              "RelativeToolTip": "Application\\Services\\RecommendationService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:58:23.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AnimeFlixBackend.csproj.Backup.tmp",
+              "DocumentMoniker": "G:\\anime_web\\proj\\AnimeFlixBackend.csproj.Backup.tmp",
+              "RelativeDocumentMoniker": "AnimeFlixBackend.csproj.Backup.tmp",
+              "ToolTip": "G:\\anime_web\\proj\\AnimeFlixBackend.csproj.Backup.tmp",
+              "RelativeToolTip": "AnimeFlixBackend.csproj.Backup.tmp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-17T11:04:02.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": ".gitignore",
+              "DocumentMoniker": "G:\\anime_web\\proj\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "G:\\anime_web\\proj\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-17T11:39:17.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RecommendationEngineService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Services\\RecommendationEngineService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\RecommendationEngineService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Services\\RecommendationEngineService.cs",
+              "RelativeToolTip": "Application\\Services\\RecommendationEngineService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:15:31.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "JikanSingleResponse.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\JikanSingleResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\JikanSingleResponse.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\JikanSingleResponse.cs",
+              "RelativeToolTip": "Application\\Interfaces\\JikanSingleResponse.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:06:43.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AIRecommendationLog.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Domain\\Entities\\AIRecommendationLog.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\AIRecommendationLog.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Domain\\Entities\\AIRecommendationLog.cs",
+              "RelativeToolTip": "Domain\\Entities\\AIRecommendationLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:26:59.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IWatchListService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IWatchListService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IWatchListService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IWatchListService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IWatchListService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:26:26.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IWatchHistoryService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IWatchHistoryService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IWatchHistoryService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IWatchHistoryService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IWatchHistoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:56:15.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:24:49.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IRecommendationService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IRecommendationService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IRecommendationService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IRecommendationService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IRecommendationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:56:43.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IRecommendationEngine.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IRecommendationEngine.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IRecommendationEngine.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IRecommendationEngine.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IRecommendationEngine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:14:31.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IJikanService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IJikanService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IJikanService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IJikanService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IJikanService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:27:07.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:24:08.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IAnimeService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Interfaces\\IAnimeService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAnimeService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Interfaces\\IAnimeService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAnimeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T06:04:18.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WatchlistDto.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\WatchlistDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\WatchlistDto.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\WatchlistDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\WatchlistDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:54:01.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WatchHistoryDtocs.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\WatchHistoryDtocs.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\WatchHistoryDtocs.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\WatchHistoryDtocs.cs",
+              "RelativeToolTip": "Application\\DTOs\\WatchHistoryDtocs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:54:26.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ReviewDto.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\ReviewDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ReviewDto.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\ReviewDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\ReviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T05:29:52.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RecommendationDto.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\RecommendationDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RecommendationDto.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\RecommendationDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\RecommendationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:54:53.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PaginationDto.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\PaginationDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\PaginationDto.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\PaginationDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\PaginationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:55:58.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AnimeDto.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\DTOs\\AnimeDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\AnimeDto.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\DTOs\\AnimeDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\AnimeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T22:19:07.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AnimeController.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\AnimeController.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Controllers\\AnimeController.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\AnimeController.cs",
+              "RelativeToolTip": "Infrastructure\\Controllers\\AnimeController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:10:12.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AiService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\External\\AiService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\External\\AiService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\External\\AiService.cs",
+              "RelativeToolTip": "Infrastructure\\External\\AiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:43:11.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "JikanAnime.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\External\\JikanAnime.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\External\\JikanAnime.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\External\\JikanAnime.cs",
+              "RelativeToolTip": "Infrastructure\\External\\JikanAnime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:08:04.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "JikanService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\External\\JikanService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\External\\JikanService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\External\\JikanService.cs",
+              "RelativeToolTip": "Infrastructure\\External\\JikanService.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAADwv34AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:43:02.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RecommendationContoller.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\RecommendationContoller.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Controllers\\RecommendationContoller.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\RecommendationContoller.cs",
+              "RelativeToolTip": "Infrastructure\\Controllers\\RecommendationContoller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:16:44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "JikanListResponse.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\External\\JikanListResponse.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\External\\JikanListResponse.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\External\\JikanListResponse.cs",
+              "RelativeToolTip": "Infrastructure\\External\\JikanListResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:56:53.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "WatchHistoryController.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\WatchHistoryController.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Controllers\\WatchHistoryController.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Controllers\\WatchHistoryController.cs",
+              "RelativeToolTip": "Infrastructure\\Controllers\\WatchHistoryController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T21:12:42.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "WatchHistory.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Domain\\Entities\\WatchHistory.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\WatchHistory.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Domain\\Entities\\WatchHistory.cs",
+              "RelativeToolTip": "Domain\\Entities\\WatchHistory.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:24:37.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAjwB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:59:07.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "WatchHistoryService.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Services\\WatchHistoryService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\WatchHistoryService.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Services\\WatchHistoryService.cs",
+              "RelativeToolTip": "Application\\Services\\WatchHistoryService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:58:01.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "WatchListService .cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Application\\Services\\WatchListService .cs",
+              "RelativeDocumentMoniker": "Application\\Services\\WatchListService .cs",
+              "ToolTip": "G:\\anime_web\\proj\\Application\\Services\\WatchListService .cs",
+              "RelativeToolTip": "Application\\Services\\WatchListService .cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAOBiwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:28:12.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Infrastructure\\Persistence\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\UnitOfWork.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Infrastructure\\Persistence\\UnitOfWork.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\UnitOfWork.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:42:06.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "WatchList.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Domain\\Entities\\WatchList.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\WatchList.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Domain\\Entities\\WatchList.cs",
+              "RelativeToolTip": "Domain\\Entities\\WatchList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:20:27.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:51:51.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\UserRole.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T21:12:43.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "G:\\anime_web\\proj\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "G:\\anime_web\\proj\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T14:09:33.806Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

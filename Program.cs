@@ -5,6 +5,7 @@ using AnimeFlixBackend.Application.Mapping.Services;
 using AnimeFlixBackend.Domain.Entities;
 using AnimeFlixBackend.Infrastructure.External;
 using AnimeFlixBackend.Infrastructure.Persistence;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -47,49 +48,77 @@ builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<AuthService>();
 
 // Add controllers support
+=======
+using Google.GenAI;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// -------------------- Controllers --------------------
+>>>>>>> 266131d8a8c5d0b1228ebb03c77ee79ddb46b4db
 builder.Services.AddControllers();
 
-// Configure DbContext (Assuming AppDbContext is in AnimeFlix.Data)
+// -------------------- Database --------------------
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// --- Data Access and External Services ---
+// -------------------- Unit Of Work --------------------
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-// Register JikanService with HttpClient configuration
+// -------------------- Jikan API --------------------
 builder.Services.AddHttpClient<IJikanService, JikanService>(client =>
 {
-    // Base URL for Jikan API v4
     client.BaseAddress = new Uri("https://api.jikan.moe/v4/");
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 });
 
-// --- Application Service Layer ---
-// Register all core application services and the recommendation engine
+// -------------------- Application Services --------------------
 builder.Services.AddScoped<IAnimeService, AnimeService>();
 builder.Services.AddScoped<IWatchlistService, WatchlistService>();
 builder.Services.AddScoped<IWatchHistoryService, WatchHistoryService>();
 builder.Services.AddScoped<IRecommendationService, RecommendationService>();
-// FIX: Register the concrete implementation for the engine interface
 builder.Services.AddScoped<IRecommendationEngine, SimpleRecommendationEngine>();
 
-// --- AutoMapper Registration ---
-builder.Services.AddAutoMapper(cfg => { cfg.AddProfile<MappingProfile>(); });
+// -------------------- AutoMapper --------------------
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<MappingProfile>();
+});
 
-// --- Swagger/OpenAPI Configuration ---
-// Adds services to generate the OpenAPI specification
+// -------------------- Google Gemini --------------------
+//var apiKey = builder.Configuration["GoogleAI:ApiKey"];
+
+//// ✅ SINGLE, CORRECT registration
+//builder.Services.AddSingleton<Client>(_ =>
+//    new Client(apiKey: apiKey)
+//);
+//builder.Services.AddHttpClient<ICharacterChatService, CharacterChatService>(client =>
+//{
+//    client.BaseAddress = new Uri("http://localhost:11434");
+//});
+
+//builder.Services.AddScoped<ICharacterChatService, CharacterChatService>();
+// Register the API Client
+builder.Services.AddSingleton(new Client(apiKey: builder.Configuration["GoogleAI:ApiKey"]));
+
+// Register your Chat Service implementation
+builder.Services.AddScoped<ICharacterChatService, CharacterChatService>();
+// -------------------- Swagger --------------------
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "AnimeFlix API", Version = "v1" });
-
-    // Note: If you want to use the Authorization button in Swagger UI, you must add the JWT security definition here.
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "AnimeFlix API",
+        Version = "v1"
+    });
 });
 
-// Program.cs - Inside var builder.Services...
-
+// -------------------- CORS --------------------
 builder.Services.AddCors(options =>
 {
+<<<<<<< HEAD
     options.AddPolicy(name: "AllowAll",
         builder =>
         {
@@ -101,22 +130,29 @@ builder.Services.AddCors(options =>
 
 
 // --- Build Application ---
+=======
+    options.AddPolicy("AllowAllDev", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// -------------------- Build --------------------
+>>>>>>> 266131d8a8c5d0b1228ebb03c77ee79ddb46b4db
 var app = builder.Build();
 
-// --- Middleware Configuration ---
+app.UseCors("AllowAllDev");
 
-// Enable Swagger UI and documentation during Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "AnimeFlix API v1");
-    });
+    app.UseSwaggerUI();
 }
 
-// Standard ASP.NET Core Middleware
 app.UseHttpsRedirection();
+<<<<<<< HEAD
 
 app.UseCors("AllowAll");
 app.UseAuthentication();
@@ -124,6 +160,9 @@ app.UseAuthentication();
 app.UseAuthorization(); // This middleware is still required to enforce any [Authorize] attributes
 
 // Maps controller endpoints to routing
+=======
+app.UseAuthorization();
+>>>>>>> 266131d8a8c5d0b1228ebb03c77ee79ddb46b4db
 app.MapControllers();
 
 app.Run();
