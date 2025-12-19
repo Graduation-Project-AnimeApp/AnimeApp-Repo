@@ -2,10 +2,10 @@
 using AnimeFlixBackend.Application.Interfaces;
 using AnimeFlixBackend.Application.Mapping;
 using AnimeFlixBackend.Application.Mapping.Services;
+using AnimeFlixBackend.Application.Services;
 using AnimeFlixBackend.Domain.Entities;
 using AnimeFlixBackend.Infrastructure.External;
 using AnimeFlixBackend.Infrastructure.Persistence;
-<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +15,10 @@ using Microsoft.OpenApi;
 using System;
 using System.Net.Http;
 using System.Text;
+// Add controllers support
+using Google.GenAI;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,16 +51,9 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<AuthService>();
 
-// Add controllers support
-=======
-using Google.GenAI;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi;
 
-var builder = WebApplication.CreateBuilder(args);
 
 // -------------------- Controllers --------------------
->>>>>>> 266131d8a8c5d0b1228ebb03c77ee79ddb46b4db
 builder.Services.AddControllers();
 
 // -------------------- Database --------------------
@@ -118,7 +115,6 @@ builder.Services.AddSwaggerGen(c =>
 // -------------------- CORS --------------------
 builder.Services.AddCors(options =>
 {
-<<<<<<< HEAD
     options.AddPolicy(name: "AllowAll",
         builder =>
         {
@@ -130,20 +126,8 @@ builder.Services.AddCors(options =>
 
 
 // --- Build Application ---
-=======
-    options.AddPolicy("AllowAllDev", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
-
-// -------------------- Build --------------------
->>>>>>> 266131d8a8c5d0b1228ebb03c77ee79ddb46b4db
 var app = builder.Build();
 
-app.UseCors("AllowAllDev");
 
 if (app.Environment.IsDevelopment())
 {
@@ -152,7 +136,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-<<<<<<< HEAD
 
 app.UseCors("AllowAll");
 app.UseAuthentication();
@@ -160,9 +143,6 @@ app.UseAuthentication();
 app.UseAuthorization(); // This middleware is still required to enforce any [Authorize] attributes
 
 // Maps controller endpoints to routing
-=======
-app.UseAuthorization();
->>>>>>> 266131d8a8c5d0b1228ebb03c77ee79ddb46b4db
 app.MapControllers();
 
 app.Run();
