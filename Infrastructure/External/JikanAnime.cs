@@ -45,5 +45,13 @@ namespace AnimeFlixBackend.Infrastructure.External
         public List<GenreDto> Genres { get; set; }
         public List<GenreDto> Studios { get; set; }
     }
-
+    public class JikanReview
+    {
+        public string Content { get; set; } = string.Empty;
+        public int Score { get; set; }
+    }
+    public class JikanReviewResponse
+    {
+        public List<JikanReview> Data { get; set; } = new();
+    }
 }

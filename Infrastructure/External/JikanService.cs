@@ -123,5 +123,14 @@ namespace AnimeFlixBackend.Infrastructure.External
                 _rateLimiter.Release();
             }
         }
+        public async Task<List<JikanReview>> GetAnimeReviewsAsync(int malId)
+        {
+            var response = await _httpClient.GetAsync($"https://api.jikan.moe/v4/anime/{malId}/reviews");
+
+            if (!response.IsSuccessStatusCode) return new List<JikanReview>();
+
+            var result = await response.Content.ReadFromJsonAsync<JikanReviewResponse>();
+            return result?.Data ?? new List<JikanReview>();
+        }
     }
 }
