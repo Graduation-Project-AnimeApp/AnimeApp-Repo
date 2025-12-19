@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeFlixBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251215175736_InitialCreate")]
+    [Migration("20251217143713_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -63,7 +63,7 @@ namespace AnimeFlixBackend.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.Review", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.Review", b =>
                 {
                     b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
@@ -101,7 +101,7 @@ namespace AnimeFlixBackend.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.User", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -150,7 +150,7 @@ namespace AnimeFlixBackend.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.UserPreference", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.UserPreference", b =>
                 {
                     b.Property<int>("PreferenceId")
                         .ValueGeneratedOnAdd()
@@ -193,7 +193,7 @@ namespace AnimeFlixBackend.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.WatchHistory", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.WatchHistory", b =>
                 {
                     b.Property<int>("HistoryId")
                         .ValueGeneratedOnAdd()
@@ -226,7 +226,7 @@ namespace AnimeFlixBackend.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AnimeFlixBackend.Models.Watchlist", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.Watchlist", b =>
                 {
                     b.Property<int>("WatchListId")
                         .ValueGeneratedOnAdd()
@@ -261,7 +261,7 @@ namespace AnimeFlixBackend.Migrations
 
             modelBuilder.Entity("AIRecommendationLog", b =>
                 {
-                    b.HasOne("AnimeFlix.Models.User", "User")
+                    b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
                         .WithMany("AIRecommendationLogs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -270,9 +270,9 @@ namespace AnimeFlixBackend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.Review", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.Review", b =>
                 {
-                    b.HasOne("AnimeFlix.Models.User", "User")
+                    b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -281,20 +281,20 @@ namespace AnimeFlixBackend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.UserPreference", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.UserPreference", b =>
                 {
-                    b.HasOne("AnimeFlix.Models.User", "User")
+                    b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
                         .WithOne("Preference")
-                        .HasForeignKey("AnimeFlix.Models.UserPreference", "UserId")
+                        .HasForeignKey("AnimeFlixBackend.Domain.Entities.UserPreference", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.WatchHistory", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.WatchHistory", b =>
                 {
-                    b.HasOne("AnimeFlix.Models.User", "User")
+                    b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
                         .WithMany("WatchHistories")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -303,9 +303,9 @@ namespace AnimeFlixBackend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AnimeFlixBackend.Models.Watchlist", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.Watchlist", b =>
                 {
-                    b.HasOne("AnimeFlix.Models.User", "User")
+                    b.HasOne("AnimeFlixBackend.Domain.Entities.User", "User")
                         .WithMany("Watchlists")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -314,7 +314,7 @@ namespace AnimeFlixBackend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AnimeFlix.Models.User", b =>
+            modelBuilder.Entity("AnimeFlixBackend.Domain.Entities.User", b =>
                 {
                     b.Navigation("AIRecommendationLogs");
 

@@ -13,6 +13,7 @@ namespace AnimeFlix.Data
         public DbSet<Watchlist> Watchlists { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<AIRecommendationLog> AIRecommendationLogs { get; set; }
+        public DbSet<AuthToken> Tokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,19 +24,29 @@ namespace AnimeFlix.Data
             modelBuilder.Entity<Watchlist>().HasKey(w => w.WatchListId);
             modelBuilder.Entity<Review>().HasKey(r => r.ReviewId);
             modelBuilder.Entity<AIRecommendationLog>().HasKey(a => a.LogId);
+            modelBuilder.Entity<AuthToken>().HasKey(a => a.TokenId);
 
            
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
 
-  
+            modelBuilder.Entity<AuthToken>()
+               .HasIndex(u => u.TokenName)
+               .IsUnique();
+
 
             // User ↔ UserPreference (One-to-One)
             modelBuilder.Entity<UserPreference>()
                 .HasOne(p => p.User)
                 .WithOne(u => u.Preference)
                 .HasForeignKey<UserPreference>(p => p.UserId);
+
+            // User ↔ AuthToken (One-to-One)
+            modelBuilder.Entity<User>()
+        .HasOne(u => u.Token)
+        .WithOne(t => t.User)
+        .HasForeignKey<AuthToken>(t => t.UserId);
 
             // User ↔ WatchHistory (One-to-Many)
             modelBuilder.Entity<WatchHistory>()

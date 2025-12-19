@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimeFlixBackend.Application.Services
+namespace AnimeFlixBackend.Application.Mapping.Services
 {
     // The concrete service implementing the interface
     public class AnimeService : IAnimeService
