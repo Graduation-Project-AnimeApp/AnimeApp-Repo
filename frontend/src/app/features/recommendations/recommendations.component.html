@@ -1,0 +1,26 @@
+<div class="layout-wrapper bg-black">
+  <div class="main-container">
+    <main class="mt-4">
+      <div class="p-3">
+        <h1 class="fw-bold display-5 mb-0 text-white" id="for-you">For You</h1>
+      </div>
+      <div class="row mt-2">
+        @for (anime of recommendationAnimeList; track $index) {
+        <div class="col-3 mb-3">
+          <img
+            (click)="openDetails(anime)"
+            [src]="anime.images.jpg.image_url"
+            alt=""
+            class="rounded-4 anime-card"
+            style="width: 225px; height: 318px"
+          />
+          <p class="pt-2 m-0 text-truncate text-white">{{ anime.title }}</p>
+          <span class="text-truncate text-episodes fst-italic">
+            {{ anime.episodes ? anime.episodes : "Unknown" }} episodes
+          </span>
+        </div>
+        }
+      </div>
+    </main>
+  </div>
+</div>

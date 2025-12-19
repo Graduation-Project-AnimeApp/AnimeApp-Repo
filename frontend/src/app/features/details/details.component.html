@@ -14,7 +14,9 @@
           <span class="badge rounded-pill bg-dark me-2">{{ genre.name }}</span>
           }
         </div>
-        <button class="generate-summary">Generate AI Summary</button>
+        <button (click)="addToWatchHistory()" class="generate-summary">
+          Finished
+        </button>
       </div>
     </div>
   </div>

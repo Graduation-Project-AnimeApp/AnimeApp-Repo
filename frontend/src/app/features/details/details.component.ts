@@ -14,13 +14,29 @@ export class DetailsComponent implements OnInit {
   animeService = inject(AnimeService);
   route = inject(ActivatedRoute);
   selectedAnime!: Anime;
+  id = this.route.snapshot.paramMap.get("id");
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get("id");
-    this.animeService.getAnimeById(id).subscribe({
+    this.animeService.getAnimeById(this.id).subscribe({
       next: (response) => {
         this.selectedAnime = response;
       },
+    });
+  }
+
+  addToWatchHistory() {
+    const requestData = {
+      userId: Number(localStorage.getItem("userId")),
+      animeApiId: this.id,
+    };
+
+    console.log(requestData);
+
+    this.animeService.addToWatchHistory(requestData).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: () => alert("Couldn't proceed with your request!"),
     });
   }
 }

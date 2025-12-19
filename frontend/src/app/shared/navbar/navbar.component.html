@@ -15,25 +15,22 @@
       </svg>
       <h2 class="logo-text mb-0">AnimeFlix</h2>
     </div>
-
     <nav class="d-none d-md-flex align-items-center gap-4">
-      <a class="nav-link-custom" href="#">Home</a>
-      <a class="nav-link-custom" href="#">Reviews</a>
-      <a class="nav-link-custom" routerLink="chat">Recommendations</a>
+      <a class="nav-link-custom" [routerLink]="['/home']">Home</a>
+      <a class="nav-link-custom" [routerLink]="['/recommendations']">
+        Recommendations
+      </a>
     </nav>
   </div>
 
   <div class="d-flex flex-1 justify-content-end align-items-center gap-3">
-    <div class="search-container d-none d-sm-flex">
-      <div class="search-icon">
-        <span class="material-symbols-outlined">search</span>
-      </div>
-      <input class="search-input" type="text" placeholder="Search" />
-    </div>
+    <button class="talk-with-ai" routerLink="chat">Anime Chat</button>
 
     <div
+      routerLink="profile"
       class="rounded-circle"
       style="
+        cursor: pointer;
         width: 40px;
         height: 40px;
         background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW505-QQwSxXa0Ea0xIPz_gxhPV_O_eHBParmrTeh2BOY4-2aQtRZBn3-YYMTZMzA4FS4-NP4wP_Cu5O2jmlt1ZcqGQL0XujBsoGwvj6Ka3-K3tBLRtETqJ6DicQF8jhlGTXFLtmoihTLt156wzzodlvff17aGVhA7OQqOAU-e0tPNdS1V0WbkdxMMF0ok8SHYgeABawmUKKLHytrfNd5MlUxmG-pKFgOdmoyJss4VmzBaavuZKJgTRCf_wxLTQKFeSUW9MQHikgs');

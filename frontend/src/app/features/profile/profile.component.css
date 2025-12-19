@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+.watch-history-scroll {
+  overflow-x: auto; /* horizontal scroll */
+  overflow-y: hidden; /* hide vertical scroll */
+  white-space: nowrap; /* keep items in one line */
+  padding-bottom: 10px; /* optional, space for scrollbar */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+}
+
+.anime-card-wrapper {
+  display: inline-block; /* prevents wrapping */
+  flex-shrink: 0; /* don’t shrink cards */
+}

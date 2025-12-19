@@ -7,9 +7,21 @@
 }
 
 .generate-summary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--primary-color); /* add 'solid' */
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.generate-summary:hover {
   background-color: var(--primary-color);
   color: white;
-  border: 0px;
+  border: 1px solid var(--primary-color); /* add 'solid' */
   padding: 10px;
   margin-top: 20px;
   border-radius: 20px;

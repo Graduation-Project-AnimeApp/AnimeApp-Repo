@@ -24,3 +24,8 @@ export interface AnimeChatRequest {
   characterName: string;
   userMessage: string;
 }
+
+export interface WatchHistoryApiResponse {
+  historyId: number;
+  animeApiId: number;
+}

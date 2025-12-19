@@ -4,10 +4,6 @@ header {
   background-color: black;
 }
 
-.movie-icon {
-  color: darkorchid;
-}
-
 .logo-text {
   font-size: 1.25rem; /* xl */
   font-weight: 700;
@@ -61,4 +57,14 @@ header {
 
 .search-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.talk-with-ai {
+  background-color: var(--primary-color);
+  color: white;
+  border: 0px;
+  padding: 9px;
+  border-radius: 20px;
+  width: fit-content;
+  font-weight: bold;
 }

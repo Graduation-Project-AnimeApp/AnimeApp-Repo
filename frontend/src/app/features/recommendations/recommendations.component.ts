@@ -5,24 +5,23 @@ import { log } from "console";
 import { NavigationEnd } from "@angular/router";
 import { ActivatedRoute, Router } from "@angular/router";
 import { filter } from "rxjs";
-
 @Component({
-  selector: "app-home",
+  selector: "app-recommendations",
   standalone: true,
   imports: [],
-  templateUrl: "./home.component.html",
-  styleUrl: "./home.component.css",
+  templateUrl: "./recommendations.component.html",
+  styleUrl: "./recommendations.component.css",
 })
-export class HomeComponent implements OnInit {
+export class RecommendationsComponent {
   animeService = inject(AnimeService);
   router = inject(Router);
   route = inject(ActivatedRoute);
-  topAnimeList: Anime[] = [];
+  recommendationAnimeList: Anime[] = [];
 
   ngOnInit(): void {
-    this.animeService.getLatestAnimeList().subscribe({
+    this.animeService.getAnimeRecommendations().subscribe({
       next: (response) => {
-        this.topAnimeList = response;
+        this.recommendationAnimeList = response;
       },
     });
   }

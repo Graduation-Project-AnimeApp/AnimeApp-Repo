@@ -1,0 +1,27 @@
+<div class="container vh-100 pt-5">
+  <div
+    class="rounded-circle d-flex mx-auto mb-3"
+    style="
+      width: 160px;
+      height: 160px;
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW505-QQwSxXa0Ea0xIPz_gxhPV_O_eHBParmrTeh2BOY4-2aQtRZBn3-YYMTZMzA4FS4-NP4wP_Cu5O2jmlt1ZcqGQL0XujBsoGwvj6Ka3-K3tBLRtETqJ6DicQF8jhlGTXFLtmoihTLt156wzzodlvff17aGVhA7OQqOAU-e0tPNdS1V0WbkdxMMF0ok8SHYgeABawmUKKLHytrfNd5MlUxmG-pKFgOdmoyJss4VmzBaavuZKJgTRCf_wxLTQKFeSUW9MQHikgs');
+      background-size: cover;
+      background-position: center;
+    "
+  ></div>
+  <h1 class="text-white text-center mb-5">Welcome back, {{ username }}!</h1>
+  <p class="text-white fs-2 fw-bold">Watch History</p>
+  <div class="watch-history-scroll d-flex gap-4">
+    @for (anime of watchHistory; track $index) {
+    <div class="anime-card-wrapper flex-shrink-0">
+      <img
+        [src]="anime.images.jpg.image_url"
+        alt=""
+        class="rounded-4 anime-card"
+        style="width: 225px; height: 318px"
+      />
+      <p class="pt-2 m-0 text-truncate text-white">{{ anime.title }}</p>
+    </div>
+    }
+  </div>
+</div>
