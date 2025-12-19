@@ -88,4 +88,21 @@ namespace AnimeFlixBackend.Application.DTOs
         [JsonPropertyName("title")]
         public string Title { get; set; }
     }
+    public class JikanReview
+    {
+        [JsonPropertyName("content")]
+        public string Content { get; set; }
+
+        [JsonPropertyName("entry")] 
+        public JikanReviewEntry Entry { get; set; }
+    }
+
+    public class JikanReviewEntry
+    {
+        [JsonPropertyName("title")]
+        public string Title { get; set; }
+
+        [JsonPropertyName("mal_id")]
+        public int MalId { get; set; }
+    }
 }

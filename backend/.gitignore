@@ -24,7 +24,7 @@ publish/
 # Environment secrets (Don't push your real passwords/API keys!)
 appsettings.Development.json
 usersecrets.json
-
+!.vscode/settings.json
 # Visual Studio
 .vs/
 

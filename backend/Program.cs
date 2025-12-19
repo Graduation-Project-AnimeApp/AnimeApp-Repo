@@ -6,20 +6,22 @@ using AnimeFlixBackend.Application.Services;
 using AnimeFlixBackend.Domain.Entities;
 using AnimeFlixBackend.Infrastructure.External;
 using AnimeFlixBackend.Infrastructure.Persistence;
+// Add controllers support
+using Google.GenAI;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
+using Microsoft.OpenApi;
 using System;
 using System.Net.Http;
 using System.Text;
-// Add controllers support
-using Google.GenAI;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi;
-
+using Hangfire;
+using Hangfire.MemoryStorage;
 var builder = WebApplication.CreateBuilder(args);
 
 // --- Services Configuration ---
@@ -123,7 +125,15 @@ builder.Services.AddCors(options =>
                    .AllowAnyMethod();
         });
 });
+///
+builder.Services.AddHangfire(config => config
+    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+    .UseSimpleAssemblyNameTypeSerializer()
+    .UseRecommendedSerializerSettings()
+    .UseMemoryStorage()); // Uses RAM; jobs will disappear if the app restarts
 
+// Add the processing server (required to actually run the jobs)
+builder.Services.AddHangfireServer();
 
 // --- Build Application ---
 var app = builder.Build();

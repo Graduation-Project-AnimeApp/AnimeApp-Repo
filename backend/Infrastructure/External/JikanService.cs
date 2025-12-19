@@ -123,5 +123,25 @@ namespace AnimeFlixBackend.Infrastructure.External
                 _rateLimiter.Release();
             }
         }
+
+       
+        public async Task<List<JikanReview>> GetAnimeReviewsAsync(int malId)
+        {
+            await ApplyRateLimitAsync();
+            var response = await _httpClient.GetFromJsonAsync<JikanListResponse<JikanReview>>($"anime/{malId}/reviews");
+            return response?.Data ?? new List<JikanReview>();
+        }
+
+        // Fix 2: Update this method to match the interface parameters
+        public async Task<List<JikanReview>> GetRecentReviewsAsync(bool preliminary = true, bool spoilers = false)
+        {
+            await ApplyRateLimitAsync();
+
+            // Build URL with BOTH parameters
+            var url = $"reviews/anime?preliminary={preliminary.ToString().ToLower()}&spoilers={spoilers.ToString().ToLower()}";
+
+            var response = await _httpClient.GetFromJsonAsync<JikanListResponse<JikanReview>>(url);
+            return response?.Data ?? new List<JikanReview>();
+        }
     }
 }
