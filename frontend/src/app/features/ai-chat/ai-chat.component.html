@@ -1,0 +1,31 @@
+<div class="chat-container rounded-5 d-flex flex-column container">
+  <h1 class="pt-3 text-center text-white">
+    Chat with your favorite Anime character!
+  </h1>
+
+  <!-- Messages -->
+  <div class="flex-grow-1 overflow-auto px-3">
+    @for (msg of messages; track $index) {
+    <div class="msg-row" [class.me]="msg.sender === 'user'">
+      <div
+        class="p-2"
+        [class.msg-card]="msg.sender === 'user'"
+        [class.ai-card]="msg.sender === 'ai'"
+      >
+        {{ msg.text }}
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- Input -->
+  <div class="d-flex align-items-end p-3 justify-content-center">
+    <input
+      type="text"
+      [(ngModel)]="userMessage"
+      class="form-control rounded-4 p-3 text-white w-50"
+      placeholder="{{ placeholder }}"
+    />
+    <button class="ms-2 send-msg" (click)="sendMessage()">Send</button>
+  </div>
+</div>

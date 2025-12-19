@@ -54,7 +54,6 @@ namespace AnimeFlixBackend.Application.Services
                         Parts = [new Part { Text = systemPrompt }]
                     },
                     Temperature = 0.8f,
-                    MaxOutputTokens = 300
                 }
             );
 

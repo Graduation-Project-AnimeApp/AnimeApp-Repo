@@ -1,21 +1,25 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Anime, AnimeApiResponse, AnimeDetailsResponse } from "../model/anime";
+import { Anime, AnimeDetailsResponse } from "../model/anime";
 
 @Injectable({
   providedIn: "root",
 })
 export class AnimeService {
   http = inject(HttpClient);
-  baseUrl = "https://api.jikan.moe/v4/";
+  baseUrl = "https://localhost:7059/";
   selectedAnime!: Anime;
 
-  getTopAnimeList(): Observable<AnimeApiResponse> {
-    return this.http.get<AnimeApiResponse>(`${this.baseUrl}top/anime?limit=20`);
+  getLatestAnimeList(): Observable<Anime[]> {
+    return this.http.get<Anime[]>(`${this.baseUrl}api/Anime/latest`);
   }
 
-  getAnimeById(id: string | null): Observable<AnimeDetailsResponse> {
-    return this.http.get<AnimeDetailsResponse>(`${this.baseUrl}anime/${id}`);
+  getAnimeById(id: string | null): Observable<Anime> {
+    return this.http.get<Anime>(`${this.baseUrl}api/Anime/${id}`);
+  }
+
+  getAiChatResponse(requestData: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}api/Chat/message`, requestData);
   }
 }

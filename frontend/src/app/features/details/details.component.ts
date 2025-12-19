@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get("id");
     this.animeService.getAnimeById(id).subscribe({
       next: (response) => {
-        this.selectedAnime = response.data;
+        this.selectedAnime = response;
       },
     });
   }

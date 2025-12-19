@@ -1,5 +1,5 @@
 export interface Anime {
-  mal_id: number;
+  malId: number;
   url: string;
   images: { jpg: { image_url: string } };
   title: string;
@@ -16,10 +16,11 @@ export interface Anime {
   genres: [{ name: string }];
 }
 
-export interface AnimeApiResponse {
-  data: Anime[];
-}
-
 export interface AnimeDetailsResponse {
   data: Anime;
+}
+
+export interface AnimeChatRequest {
+  characterName: string;
+  userMessage: string;
 }

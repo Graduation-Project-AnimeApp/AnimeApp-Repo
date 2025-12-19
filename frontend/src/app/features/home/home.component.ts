@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   topAnimeList: Anime[] = [];
 
   ngOnInit(): void {
-    this.animeService.getTopAnimeList().subscribe({
+    this.animeService.getLatestAnimeList().subscribe({
       next: (response) => {
-        this.topAnimeList = response.data;
+        this.topAnimeList = response;
       },
     });
 
@@ -30,10 +30,10 @@ export class HomeComponent implements OnInit {
     this.animeService.selectedAnime = selectedAnime;
     console.log(
       "SELECTED ANIME CARD INDEX AND TITLE:",
-      selectedAnime.mal_id,
+      selectedAnime.malId,
       selectedAnime.title
     );
 
-    this.router.navigate(["details", selectedAnime.mal_id]);
+    this.router.navigate(["details", selectedAnime.malId]);
   }
 }
