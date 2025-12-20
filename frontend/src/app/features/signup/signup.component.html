@@ -77,8 +77,17 @@
           />
         </div>
 
-        <button type="submit" class="btn btn-primary-custom w-100">
-          Register
+        <button
+          type="submit"
+          class="btn btn-primary-custom w-100 d-flex align-items-center justify-content-center gap-2"
+          [disabled]="isLoading || registerForm.invalid"
+        >
+          @if (!isLoading) { Register } @else {
+          <div
+            class="spinner-border spinner-border-sm text-light"
+            role="status"
+          ></div>
+          }
         </button>
       </form>
 

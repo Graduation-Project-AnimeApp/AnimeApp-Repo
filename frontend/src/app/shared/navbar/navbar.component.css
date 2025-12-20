@@ -61,10 +61,13 @@ header {
 
 .talk-with-ai {
   background-color: var(--primary-color);
+  border: none;
   color: white;
-  border: 0px;
-  padding: 9px;
-  border-radius: 20px;
-  width: fit-content;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.talk-with-ai:disabled {
+  opacity: 0.7;
 }

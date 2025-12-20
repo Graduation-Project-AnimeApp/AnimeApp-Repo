@@ -17,6 +17,7 @@ export const routes: Routes = [
     path: "",
     component: PublicComponent,
     children: [
+      { path: "", redirectTo: "login", pathMatch: "full" },
       { path: "login", component: LoginComponent },
       { path: "signup", component: SignupComponent },
     ],
@@ -27,9 +28,9 @@ export const routes: Routes = [
     component: PrivateComponent,
     canActivate: [authGuard],
     children: [
+      { path: "", redirectTo: "home", pathMatch: "full" },
       { path: "home", component: HomeComponent },
       { path: "recommendations", component: RecommendationsComponent },
-
       { path: "details/:id", component: DetailsComponent },
       { path: "chat", component: AiChatComponent },
       { path: "profile", component: ProfileComponent },

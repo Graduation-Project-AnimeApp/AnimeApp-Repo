@@ -17,11 +17,16 @@ export class RecommendationsComponent {
   router = inject(Router);
   route = inject(ActivatedRoute);
   recommendationAnimeList: Anime[] = [];
+  isLoading = true;
 
   ngOnInit(): void {
     this.animeService.getAnimeRecommendations().subscribe({
       next: (response) => {
         this.recommendationAnimeList = response;
+        this.isLoading = false;
+      },
+      error: () => {
+        this.isLoading = false;
       },
     });
   }

@@ -4,6 +4,17 @@
       <div class="p-3">
         <h1 class="fw-bold display-5 mb-0 text-white" id="for-you">For You</h1>
       </div>
+      @if (isLoading) {
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="height: 300px"
+      >
+        <div class="spinner-border text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      } @else {
+
       <div class="row mt-2">
         @for (anime of recommendationAnimeList; track $index) {
         <div class="col-3 mb-3">
@@ -21,6 +32,7 @@
         </div>
         }
       </div>
+      }
     </main>
   </div>
 </div>

@@ -11,8 +11,17 @@
         class="p-2"
         [class.msg-card]="msg.sender === 'user'"
         [class.ai-card]="msg.sender === 'ai'"
+        [class.ai-flash]="msg.sender === 'ai'"
       >
         {{ msg.text }}
+      </div>
+    </div>
+    } @if (isAiTyping) {
+    <div class="msg-row">
+      <div class="p-2 ai-card ai-typing">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </div>
     }
@@ -25,7 +34,14 @@
       [(ngModel)]="userMessage"
       class="form-control rounded-4 p-3 text-white w-50"
       placeholder="{{ placeholder }}"
+      [disabled]="isAiTyping"
     />
-    <button class="ms-2 send-msg" (click)="sendMessage()">Send</button>
+    <button
+      class="ms-2 send-msg"
+      (click)="sendMessage()"
+      [disabled]="isAiTyping"
+    >
+      Send
+    </button>
   </div>
 </div>

@@ -14,14 +14,17 @@ export class LoginComponent {
   router = inject(Router);
   email!: string;
   password!: string;
+  isLoading = false;
 
   onSubmit() {
     if (this.email.trim() != "" && this.password.trim() != "") {
       const userData = { email: this.email, password: this.password };
+      this.isLoading = true;
 
       this.authService.login(userData).subscribe({
         next: (response) => {
           this.router.navigate(["/home"]);
+          this.isLoading = false;
         },
       });
     }

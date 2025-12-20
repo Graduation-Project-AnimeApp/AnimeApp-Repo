@@ -126,7 +126,7 @@ namespace AnimeFlixBackend.Controllers
                     r.ReviewText,
                     r.CreatedAt,
                     Status = "Completed",
-                    Provider = "Gemini 1.5 Flash"
+                    Provider = "Gemini 2.5 Flash"
                 })
                 .FirstOrDefaultAsync();
 

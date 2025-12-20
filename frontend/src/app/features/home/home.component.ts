@@ -18,11 +18,16 @@ export class HomeComponent implements OnInit {
   router = inject(Router);
   route = inject(ActivatedRoute);
   topAnimeList: Anime[] = [];
+  isLoading = true;
 
   ngOnInit(): void {
     this.animeService.getLatestAnimeList().subscribe({
       next: (response) => {
         this.topAnimeList = response;
+        this.isLoading = false;
+      },
+      error: () => {
+        this.isLoading = false;
       },
     });
   }

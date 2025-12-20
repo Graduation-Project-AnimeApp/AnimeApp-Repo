@@ -9,8 +9,21 @@
       background-position: center;
     "
   ></div>
+
   <h1 class="text-white text-center mb-5">Welcome back, {{ username }}!</h1>
+
   <p class="text-white fs-2 fw-bold">Watch History</p>
+
+  @if (isLoadingHistory) {
+  <div
+    class="d-flex justify-content-center align-items-center"
+    style="height: 320px"
+  >
+    <div class="spinner-border text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  } @else {
   <div class="watch-history-scroll d-flex gap-4">
     @for (anime of watchHistory; track $index) {
     <div class="anime-card-wrapper flex-shrink-0">
@@ -20,8 +33,11 @@
         class="rounded-4 anime-card"
         style="width: 225px; height: 318px"
       />
-      <p class="pt-2 m-0 text-truncate text-white">{{ anime.title }}</p>
+      <p class="pt-2 m-0 text-truncate text-white">
+        {{ anime.title }}
+      </p>
     </div>
     }
   </div>
+  }
 </div>

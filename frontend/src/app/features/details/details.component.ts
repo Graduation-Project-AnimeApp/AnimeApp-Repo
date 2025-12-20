@@ -20,6 +20,7 @@ export class DetailsComponent implements OnInit {
     this.animeService.getAnimeById(this.id).subscribe({
       next: (response) => {
         this.selectedAnime = response;
+        console.log("DETAILS: ", response);
       },
     });
   }

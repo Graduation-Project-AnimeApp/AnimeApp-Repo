@@ -17,6 +17,7 @@ export class AiChatComponent {
   messagesSent: number = 0;
   messages: { text: string; sender: "user" | "ai" }[] = [];
   userMessage = "";
+  isAiTyping = false;
 
   sendMessage() {
     if (this.userMessage !== "") {
@@ -25,6 +26,7 @@ export class AiChatComponent {
         this.characterName = this.userMessage;
         this.userMessage = "";
       } else {
+        this.isAiTyping = true;
         this.placeholder = "Enter your message here";
         this.messages.push({ text: this.userMessage, sender: "user" });
         const requestData: AnimeChatRequest = {
@@ -37,6 +39,7 @@ export class AiChatComponent {
               text: response.characterResponse,
               sender: "ai",
             });
+            this.isAiTyping = false;
           },
         });
         this.userMessage = "";

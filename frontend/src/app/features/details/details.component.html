@@ -1,26 +1,63 @@
-<div class="main">
-  <div class="container pt-5">
-    <div class="d-flex">
-      <img
-        class="rounded-4"
-        [src]="selectedAnime.images.jpg.image_url"
-        alt="cover"
-      />
-      <div class="d-flex flex-column ms-3">
-        <h1 class="text-white">{{ selectedAnime.title }}</h1>
-        <p class="rating-text">⭐ {{ selectedAnime.score }} / 10</p>
-        <div class="mb-2">
-          @for (genre of selectedAnime.genres; track $index) {
-          <span class="badge rounded-pill bg-dark me-2">{{ genre.name }}</span>
-          }
-        </div>
-        <button (click)="addToWatchHistory()" class="generate-summary">
-          Finished
-        </button>
-      </div>
+<div class="details-wrapper">
+  @if (!selectedAnime) {
+  <!-- Loading Spinner -->
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="spinner-border text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <div class="container">
-    <p class="text-white mt-4">{{ selectedAnime.synopsis }}</p>
+  } @else {
+  <div class="details-container container py-4">
+    <div class="d-flex flex-column flex-md-row gap-4">
+      <!-- Cover Image -->
+      <div class="cover-wrapper flex-shrink-0">
+        <img
+          [src]="selectedAnime.images.jpg.image_url"
+          alt="cover"
+          class="rounded-4 cover-img"
+        />
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-wrapper flex-grow-1 d-flex flex-column gap-3">
+        <h1 class="text-white">{{ selectedAnime.title }}</h1>
+        <p class="text-white fs-6">{{ selectedAnime.title_english }}</p>
+
+        <!-- Stats Row -->
+        <div class="d-flex flex-wrap gap-3 stats-row">
+          <span class="text-white">⭐ {{ selectedAnime.score }} / 10</span>
+          <span class="text-white">Rank: #{{ selectedAnime.rank }}</span>
+          <span class="text-white"
+            >Popularity: {{ selectedAnime.popularity }}</span
+          >
+          <span class="text-white">Episodes: {{ selectedAnime.episodes }}</span>
+          <span class="text-white">Type: {{ selectedAnime.type }}</span>
+          <span class="text-white">Status: {{ selectedAnime.status }}</span>
+          <span class="text-white">Year: {{ selectedAnime.year }}</span>
+        </div>
+
+        <!-- Genres (Horizontal Scroll) -->
+        <div class="genres-scroll d-flex gap-2 overflow-auto py-1">
+          @for (genre of selectedAnime.genres; track $index) {
+          <span class="badge bg-dark rounded-pill flex-shrink-0">{{
+            genre.name
+          }}</span>
+          }
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex flex-wrap gap-2 mt-2">
+          <button class="generate-summary" (click)="addToWatchHistory()">
+            Finished
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Synopsis -->
+    <div class="synopsis mt-4 text-white">
+      <p>{{ selectedAnime.synopsis }}</p>
+    </div>
   </div>
+  }
 </div>

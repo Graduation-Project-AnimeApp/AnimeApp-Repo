@@ -2,6 +2,7 @@ import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { Router, RouterLink } from "@angular/router";
 import { AuthService } from "../../core/auth/services/auth.service";
+import { error } from "console";
 
 @Component({
   selector: "app-signup",
@@ -17,6 +18,7 @@ export class SignupComponent {
   email: string = "";
   password: string = "";
   confirmPassword: string = "";
+  isLoading = false;
 
   onSubmit() {
     if (
@@ -37,11 +39,16 @@ export class SignupComponent {
         confirmPassword: this.confirmPassword,
       };
 
+      this.isLoading = true;
       this.authService.signup(userData).subscribe({
         next: () => {
+          this.isLoading = false;
           this.router.navigate(["/home"]);
         },
       });
+      error: () => {
+        this.isLoading = false;
+      };
     }
   }
 }

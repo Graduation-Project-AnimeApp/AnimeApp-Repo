@@ -28,3 +28,69 @@
   width: fit-content;
   font-weight: bold;
 }
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.details-wrapper {
+  background-color: #0f0f0f;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.cover-wrapper {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.cover-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.info-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stats-row span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.genres-scroll {
+  max-width: 100%;
+  padding-bottom: 4px;
+}
+
+.genres-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.genres-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.generate-summary {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.generate-summary:disabled {
+  opacity: 0.7;
+}

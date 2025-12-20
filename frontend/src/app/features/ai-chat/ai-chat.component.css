@@ -51,10 +51,59 @@ input::placeholder {
   max-width: 70%;
 }
 
+/* AI message glow */
 .ai-card {
-  background-color: #2a2a2a;
+  background: linear-gradient(135deg, #8a3ffc, #d12670);
   color: white;
-
-  border-radius: 1.5px 20px 20px 20px;
+  border-radius: 16px;
   max-width: 70%;
+  animation: aiGlow 2.5s ease-in-out infinite;
+}
+
+/* Subtle pulse */
+@keyframes aiGlow {
+  0% {
+    box-shadow: 0 0 6px rgba(138, 63, 252, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(209, 38, 112, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(138, 63, 252, 0.4);
+  }
+}
+
+/* Typing indicator */
+.ai-typing {
+  display: flex;
+  gap: 6px;
+  width: fit-content;
+}
+
+/* Flashing dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }

@@ -47,9 +47,15 @@
       <button
         (click)="onSubmit()"
         type="submit"
-        class="btn btn-primary-custom w-100"
+        class="btn btn-primary-custom w-100 d-flex align-items-center justify-content-center gap-2"
+        [disabled]="isLoading"
       >
-        Login
+        @if (!isLoading) { Login } @else {
+        <div
+          class="spinner-border spinner-border-sm text-light"
+          role="status"
+        ></div>
+        }
       </button>
 
       <div class="mt-4 text-center">

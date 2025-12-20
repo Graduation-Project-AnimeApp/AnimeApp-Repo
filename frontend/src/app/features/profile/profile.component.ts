@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from "@angular/core";
 import { Anime } from "../../core/model/anime";
 import { AnimeService } from "../../core/services/anime.service";
+import { error } from "console";
 
 @Component({
   selector: "app-profile",
@@ -13,6 +14,7 @@ export class ProfileComponent implements OnInit {
   animeService = inject(AnimeService);
   username: string | null = localStorage.getItem("username");
   watchHistory: Anime[] = [];
+  isLoadingHistory = true;
 
   ngOnInit(): void {
     const userIdStr = localStorage.getItem("userId");
@@ -30,6 +32,7 @@ export class ProfileComponent implements OnInit {
       // Call your existing method
       this.animeService.getMultipleAnimeByIds(animeIds).subscribe((animes) => {
         this.watchHistory = animes;
+        this.isLoadingHistory = false;
       });
     });
   }
